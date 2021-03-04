@@ -18,7 +18,7 @@
 			}
 			else
 			{
-				$response = json_decode(file_get_contents("https://hcaptcha.com/siteverify?secret=$rcv_secret_key&response=".$captcha), 1);
+				$response = json_decode(file_get_contents("https://hcaptcha.com/siteverify?secret=$hc_secret_key&response=".$captcha), 1);
 				if($response['success'] == false)
 				{
 					array_push($errors, 'The captcha verification failed.');
