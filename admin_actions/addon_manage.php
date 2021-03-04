@@ -50,7 +50,7 @@ if($_SESSION['hCaptcha_INSTALL'] == "YES")
 					</div>
 					<div class="card-body">
 						<form method="post" action="client_area?admin_area=1&addon_use=hCaptcha&install_process=1">
-							<p style="color: green;">Please complete the fields with real and valid information. If you encounter problems, check out the <a href="https://github.com/ISaiDPower/BF_JPNhCaptcha" target="_blank">GitHub repository</a>.</p>
+							<p style="color: green;">Please complete the fields with real and valid information. If you encounter problems, check out the <a href="https://github.com/ISaiDPower/JPN_hCaptcha" target="_blank">GitHub repository</a>.</p>
 							<p>hCaptcha site key: </p>
 							<div class="input-group mb-4 border p-2">
 								<input type="text" placeholder="Enter your hCaptcha site key" name="m_site_key" aria-describedby="button-addon3" class="form-control border" required="">
@@ -142,7 +142,7 @@ display_messages(); ?>
 <script type="text/javascript">
   var onloadCallback = function() {
     hcaptcha.render('captcha', {
-      'sitekey' : '<?php echo $rcv_site_key; ?>',
+      'sitekey' : '<?php echo $hc_site_key; ?>',
     });
     hcaptcha.reset();
   };
@@ -154,7 +154,7 @@ display_messages(); ?>
 				<h6 class="m-0 font-weight-bold text-primary">hCaptcha Addon Config</h6>
 			</div>
 			<div class="card-body">
-				<p style="color: green;">Please complete the fields with real and valid information. If you encounter problems, check out the <a href="https://github.com/ISaiDPower/BF_JPNhCaptcha" target="_blank">GitHub repository</a>.</p>
+				<p style="color: green;">Please complete the fields with real and valid information. If you encounter problems, check out the <a href="https://github.com/ISaiDPower/JPN_hCaptcha" target="_blank">GitHub repository</a>.</p>
 				<i class="fa fa-cube"></i><b style="font-family: Muli, sans-serif;"> hCaptcha site key:</b><br> <code><pre><?php echo htmlspecialchars($hc_site_key);?></pre></code><br>
 				<i class="fa fa-cube"></i><b style="font-family: Muli, sans-serif;"> hCaptcha secret key:</b><br> <a href="javascript:void(0);" onclick="toggleShowKey()" id="secretkey">(Click to retrieve credentials)</a><br>
 				<i class="fa fa-cube"></i><b style="font-family: Muli, sans-serif;"> hCaptcha enabled on registrations:</b> <?php echo ($hc_register == 1) ? 'Yes' : 'No'; ?><br>
